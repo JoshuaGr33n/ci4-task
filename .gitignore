@@ -1,0 +1,7 @@
+# Ignore environment files
+application/config/config.php
+application/config/database.php
+application/config/*.php
+
+# Ignore vendor directory
+vendor/
