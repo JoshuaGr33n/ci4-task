@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Requests;
+
+use CodeIgniter\Validation\Validation;
+
+class UpdateTaskRequest
+{
+    public function rules(array $data): array
+    {
+        return [
+            'title' => 'required|is_unique[task.title,id,' . $data['id'] . ']|min_length[3]',
+            'description' => 'required',
+        ];
+    }
+
+    public function update(array $data)
+    {
+        $validation = \Config\Services::validation();
+        $validation->setRules($this->rules($data));
+
+        if ($validation->run($data)) {
+            $data['status'] = $data['status'] ?? 'incomplete';
+            return $data;
+        } else {
+            return $validation->getErrors();
+        }
+    }
+}

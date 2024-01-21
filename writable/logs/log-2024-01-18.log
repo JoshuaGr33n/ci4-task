@@ -1,0 +1,36 @@
+CRITICAL - 2024-01-18 00:00:28 --> Error: Call to a member function hasError() on array
+in APPPATH/Views/tasks/create.php on line 10.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/create', [], true)
+ 4 APPPATH/Controllers/Tasks.php(52): view('tasks/create', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->store()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-18 00:01:11 --> Error: Call to a member function hasError() on array
+in APPPATH/Views/tasks/create.php on line 10.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/create', [], true)
+ 4 APPPATH/Controllers/Tasks.php(52): view('tasks/create', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->store()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-18 00:08:21 --> Error: Class "App\Requests\UpdateTaskRequest" not found
+in APPPATH/Controllers/Tasks.php on line 66.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->update('7')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-18 00:13:05 --> Error: Class "App\Requests\UpdateTaskRequest" not found
+in APPPATH/Controllers/Tasks.php on line 65.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->update('7')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')

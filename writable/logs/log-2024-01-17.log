@@ -1,0 +1,537 @@
+CRITICAL - 2024-01-17 17:56:49 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "m.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('m.php')
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('m', [], true)
+ 3 APPPATH/Controllers/Home.php(9): view('m')
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+ERROR - 2024-01-17 19:22:06 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci_task', 8889, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/ci-task/spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ci-task/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-17 19:22:36 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci_task', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/ci-task/spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ci-task/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-17 19:23:20 --> mysqli_sql_exception: Invalid default value for 'created_at' in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php(306): mysqli->query('CREATE TABLE `t...', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Database/Migrations/2024-01-17-192056_CreateTasksTable.php(43): CodeIgniter\Database\Forge->createTable('tasks')
+#5 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateTasksTable->up()
+#6 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/ci-task/spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-17 19:39:10 --> mysqli_sql_exception: Invalid default value for 'updated_at' in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php(306): mysqli->query('CREATE TABLE `t...', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Database/Migrations/2024-01-17-192056_CreateTasksTable.php(43): CodeIgniter\Database\Forge->createTable('tasks')
+#5 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateTasksTable->up()
+#6 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/ci-task/spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-17 19:40:11 --> mysqli_sql_exception: Invalid default value for 'updated_at' in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php(306): mysqli->query('CREATE TABLE `t...', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Database/Migrations/2024-01-17-192056_CreateTasksTable.php(43): CodeIgniter\Database\Forge->createTable('tasks')
+#5 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateTasksTable->up()
+#6 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/ci-task/spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-17 19:40:44 --> mysqli_sql_exception: Invalid default value for 'created_at' in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php(306): mysqli->query('CREATE TABLE `t...', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Database/Migrations/2024-01-17-192056_CreateTasksTable.php(43): CodeIgniter\Database\Forge->createTable('tasks')
+#5 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateTasksTable->up()
+#6 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/ci-task/spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-17 19:41:45 --> mysqli_sql_exception: Invalid default value for 'updated_at' in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php(306): mysqli->query('CREATE TABLE `t...', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Database/Migrations/2024-01-17-192056_CreateTasksTable.php(43): CodeIgniter\Database\Forge->createTable('tasks')
+#5 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateTasksTable->up()
+#6 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/ci-task/spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-17 19:43:20 --> mysqli_sql_exception: Invalid default value for 'updated_at' in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MySQLi/Connection.php(306): mysqli->query('CREATE TABLE `t...', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Database/Migrations/2024-01-17-192056_CreateTasksTable.php(45): CodeIgniter\Database\Forge->createTable('tasks')
+#5 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateTasksTable->up()
+#6 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CLI/Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/ci-task/spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+CRITICAL - 2024-01-17 20:28:12 --> ErrorException: Undefined array key "title"
+in APPPATH/Views/tasks/index.php on line 17.
+ 1 APPPATH/Views/tasks/index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', '/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php', 17)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH/Controllers/Tasks.php(15): view('tasks/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:28:38 --> ErrorException: Undefined array key "title"
+in APPPATH/Views/tasks/index.php on line 17.
+ 1 APPPATH/Views/tasks/index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', '/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php', 17)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH/Controllers/Tasks.php(15): view('tasks/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:30:11 --> ErrorException: Undefined array key "title"
+in APPPATH/Views/tasks/index.php on line 17.
+ 1 APPPATH/Views/tasks/index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', '/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php', 17)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH/Controllers/Tasks.php(15): view('tasks/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:30:12 --> ErrorException: Undefined array key "title"
+in APPPATH/Views/tasks/index.php on line 17.
+ 1 APPPATH/Views/tasks/index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', '/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php', 17)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH/Controllers/Tasks.php(15): view('tasks/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:37:14 --> ErrorException: Undefined array key "title"
+in APPPATH/Views/tasks/index.php on line 17.
+ 1 APPPATH/Views/tasks/index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', '/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php', 17)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH/Controllers/Tasks.php(15): view('tasks/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:38:19 --> ErrorException: Undefined array key "title"
+in APPPATH/Views/tasks/index.php on line 17.
+ 1 APPPATH/Views/tasks/index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', '/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php', 17)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH/Controllers/Tasks.php(15): view('tasks/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:38:44 --> ErrorException: Undefined array key "title"
+in APPPATH/Views/tasks/index.php on line 17.
+ 1 APPPATH/Views/tasks/index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', '/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php', 17)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH/Controllers/Tasks.php(15): view('tasks/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:38:51 --> ErrorException: Undefined array key "title"
+in APPPATH/Views/tasks/index.php on line 17.
+ 1 APPPATH/Views/tasks/index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', '/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php', 17)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH/Controllers/Tasks.php(15): view('tasks/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:38:51 --> ErrorException: Undefined array key "title"
+in APPPATH/Views/tasks/index.php on line 17.
+ 1 APPPATH/Views/tasks/index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', '/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php', 17)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Views/tasks/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH/Controllers/Tasks.php(15): view('tasks/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:39:44 --> Error: Call to undefined function form_open()
+in APPPATH/Views/tasks/create.php on line 13.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/create', [], true)
+ 4 APPPATH/Controllers/Tasks.php(20): view('tasks/create')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->create()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:40:11 --> Error: Call to undefined function form_open()
+in APPPATH/Views/tasks/create.php on line 13.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/create', [], true)
+ 4 APPPATH/Controllers/Tasks.php(20): view('tasks/create')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->create()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:41:18 --> Error: Call to undefined function form_open()
+in APPPATH/Views/tasks/create.php on line 13.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/create', [], true)
+ 4 APPPATH/Controllers/Tasks.php(20): view('tasks/create')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->create()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:45:20 --> Error: Call to a member function open() on null
+in APPPATH/Controllers/Tasks.php on line 29.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->create()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:46:36 --> Error: Call to a member function open() on null
+in APPPATH/Controllers/Tasks.php on line 30.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->create()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:48:45 --> Error: Call to a member function open() on null
+in APPPATH/Controllers/Tasks.php on line 30.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->create()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:50:18 --> Error: Call to a member function open() on null
+in APPPATH/Controllers/Tasks.php on line 31.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->create()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:51:16 --> Error: Call to a member function open() on null
+in APPPATH/Controllers/Tasks.php on line 31.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->create()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:55:19 --> Error: Call to undefined function form_open()
+in APPPATH/Views/tasks/create.php on line 13.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/create', [], true)
+ 4 APPPATH/Controllers/Tasks.php(29): view('tasks/create')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->create()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 20:55:29 --> Error: Call to undefined function form_open()
+in APPPATH/Views/tasks/create.php on line 13.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('tasks/create', [], true)
+ 4 APPPATH/Controllers/Tasks.php(29): view('tasks/create')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->create()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 21:22:22 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 21:22:47 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 21:23:21 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 21:25:10 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 21:29:34 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 21:30:00 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 21:30:48 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 21:59:35 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 22:01:19 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 22:04:52 --> ParseError: syntax error, unexpected token "<", expecting "function"
+in APPPATH/Controllers/Tasks.php on line 27.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Controllers/Tasks.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Tasks')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Tasks')
+ 4 SYSTEMPATH/CodeIgniter.php(899): class_exists('\\App\\Controllers\\Tasks', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 22:05:13 --> ParseError: syntax error, unexpected token "<", expecting "function"
+in APPPATH/Controllers/Tasks.php on line 27.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Controllers/Tasks.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Tasks')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Tasks')
+ 4 SYSTEMPATH/CodeIgniter.php(899): class_exists('\\App\\Controllers\\Tasks', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 22:05:51 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 2 expected
+in APPPATH/Controllers/Tasks.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 22:11:09 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 2 expected
+in APPPATH/Controllers/Tasks.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 22:15:26 --> ArgumentCountError: Too few arguments to function CodeIgniter\Validation\Validation::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/app/Controllers/Tasks.php on line 22 and exactly 2 expected
+in SYSTEMPATH/Validation/Validation.php on line 113.
+ 1 APPPATH/Controllers/Tasks.php(22): CodeIgniter\Validation\Validation->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 22:18:54 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::__construct(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 913 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Tasks->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 22:45:03 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::store(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 941 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 70.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->store()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 22:57:01 --> ArgumentCountError: Too few arguments to function App\Controllers\Tasks::store(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/ci-task/system/CodeIgniter.php on line 941 and exactly 1 expected
+in APPPATH/Controllers/Tasks.php on line 70.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->store()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 23:09:52 --> Error: Class "App\Requests\UpdateTaskRequest" not found
+in APPPATH/Controllers/Tasks.php on line 62.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->update('2')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 23:11:16 --> Error: Class "App\Requests\UpdateTaskRequest" not found
+in APPPATH/Controllers/Tasks.php on line 61.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->update('4')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 23:16:04 --> Error: Class "App\Requests\UpdateTaskRequest" not found
+in APPPATH/Controllers/Tasks.php on line 63.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->update('5')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 23:22:38 --> Error: Class "App\Requests\UpdateTaskRequest" not found
+in APPPATH/Controllers/Tasks.php on line 63.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->update('6')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 23:34:22 --> Error: Class "App\Requests\UpdateTaskRequest" not found
+in APPPATH/Controllers/Tasks.php on line 63.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->update('6')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 23:38:35 --> Error: Class "App\Requests\UpdateTaskRequest" not found
+in APPPATH/Controllers/Tasks.php on line 63.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->update('6')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 23:38:41 --> Error: Class "App\Requests\UpdateTaskRequest" not found
+in APPPATH/Controllers/Tasks.php on line 63.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->update('6')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 23:40:14 --> Error: Class "App\Requests\UpdateTaskRequest" not found
+in APPPATH/Controllers/Tasks.php on line 60.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->update('6')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
+CRITICAL - 2024-01-17 23:47:21 --> Error: Class "App\Requests\UpdateTaskRequest" not found
+in APPPATH/Controllers/Tasks.php on line 60.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Tasks->update('7')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/XAMPP/xamppfiles/htdocs/ci-task/public/index.php')
